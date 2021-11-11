@@ -12,7 +12,7 @@
     <ul>
     <% for (i = 0; i < bakedGoods.length; i++) { %>
         <li>
-            <a href="/bakedgoods/<%i%>"><%= bakedGoods[i].name%></a>, $<%= bakedGoods[i].price%>
+            <a href="/bakedgoods/<%=i%>"><%= bakedGoods[i].name%></a>, $<%= bakedGoods[i].price%>
         </li>
     <% } %>    
     </ul>

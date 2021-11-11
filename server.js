@@ -18,9 +18,15 @@ app.get('/bakedgoods', (req, res) => {
   res.render("index.ejs", {bakedGoods});
 });
 
+// new route
+app.get("/bakedgoods/new", (req, res) => {
+  res.render("new.ejs");
+});
+
 // show route
 app.get('/bakedgoods/:id', (req, res) => {
-  res.render("show.ejs");
+  const foundBakedGood = bakedGoods[req.params.id];
+  res.render("show.ejs", {foundBakedGood});
 });
 
 // =======================================
