@@ -15,7 +15,7 @@ const bakedGoods = require('./models/bakedgoods.js');
 // =======================================
 // index route
 app.get('/bakedgoods', (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", {bakedGoods});
 });
 
 // show route

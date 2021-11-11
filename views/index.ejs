@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>Welcome to Biscoff Bakery!</h1>
+    <h2>Here are the bakery goods we have available:</h2>
+    <ul>
+    <% for (i = 0; i < bakedGoods.length; i++) { %>
+        <li>
+            <a href="/bakedgoods/<%i%>"><%= bakedGoods[i].name%></a>, $<%= bakedGoods[i].price%>
+        </li>
+    <% } %>    
+    </ul>
 </body>
 </html>
