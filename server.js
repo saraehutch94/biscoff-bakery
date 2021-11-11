@@ -11,6 +11,12 @@ const port = 3000;
 const bakedGoods = require('./models/bakedgoods.js');
 
 // =======================================
+//              MIDDLEWARE
+// =======================================
+
+app.use(express.urlencoded({ extended: false}));
+
+// =======================================
 //              ROUTES
 // =======================================
 // index route
@@ -21,6 +27,12 @@ app.get('/bakedgoods', (req, res) => {
 // new route
 app.get("/bakedgoods/new", (req, res) => {
   res.render("new.ejs");
+});
+
+// create route
+app.post("/bakedgoods", (req, res) => {
+  bakedGoods.push(req.body);
+  res.redirect("/bakedgoods");
 });
 
 // show route
