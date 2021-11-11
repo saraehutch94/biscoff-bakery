@@ -14,6 +14,7 @@ const bakedGoods = require('./models/bakedgoods.js');
 //              MIDDLEWARE
 // =======================================
 
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false}));
 
 // =======================================
